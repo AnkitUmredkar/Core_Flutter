@@ -19,6 +19,4 @@ void main()
   {
     print("Enter valid Number!!");
   }
-  
-  
 }
