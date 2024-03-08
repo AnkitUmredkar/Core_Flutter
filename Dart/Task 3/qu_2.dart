@@ -6,7 +6,8 @@ import 'dart:io';
 void main()
 {
     List str = [];
-    int i;
+    List unique = [];
+    int i,j;
 
     stdout.write("Enter the Size : ");
     int n = int.parse(stdin.readLineSync()!);
@@ -15,6 +16,7 @@ void main()
     {
       stdout.write("Enter element : ");
       str.add(stdin.readLineSync()!);
+      unique.add(1);
     }
 
     stdout.write("\n>----Entered List----<\n");
@@ -26,19 +28,21 @@ void main()
     stdout.write("\n>----Unique List----<\n");
     for(i=0; i<n; i++)
     {
-      for(int j=i+1; j<n; j++)
+      if(unique[i] == 0)
+      {
+        continue;
+      }
+      for(j=i+1; j<n; j++)
       {
         if(str[i] == str[j])
         {
-          str[i] = 0;
-          str[j] = 0;
+          unique[i] = 0;
+          unique[j] = 0;
         }
       }
-      if(str[i] != 0)
+      if(unique[i] == 1)
       {
-        print("${str[i]}");
+        print(str[i]);
       }
-    }
-
-
+    }  
 }
