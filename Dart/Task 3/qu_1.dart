@@ -44,12 +44,18 @@ class MapEntry
 
 void main() 
 {
-  MapEntry m1 = MapEntry();
+  List<MapEntry> emp1 = [];
 
   for (int i = 0; i < 3; i++)
   {
+    MapEntry m1 = MapEntry();
     m1.set(i);
-    m1.get(i);
+    emp1.add(m1);
+  }
+
+  for(int i=0; i<3; i++)
+  {
+    emp1[i].get(i);
   }
     
 }
