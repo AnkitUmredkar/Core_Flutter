@@ -1,4 +1,4 @@
-// Writ a Dart Program to gt an print total thrmplo!s information using usr input and Map
+//1. Writ a Dart Program to gt an print total thrmplo!s information using usr input and Map
 //Map datatype(use MapEntry class)
 // Tak low mntion attriuts for on
 // id
