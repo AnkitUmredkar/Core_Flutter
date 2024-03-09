@@ -1,4 +1,4 @@
-// Writ a Dart Program to gt an print total thrmplo!s information using usr input and Map
+//1.Writ a Dart Program to gt an print total thrmplo!s information using usr input and Map
 //Map datatype(use MapEntry class)
 // Tak low mntion attriuts for on
 // id
@@ -14,7 +14,8 @@ class Employee
 
   void set(int i) 
   {
-    stdout.write("\n\nEnter Employee id : ");
+    stdout.write("\n\n>---Enter Employee ${i+1} Details---<\n");
+    stdout.write("Enter Employee id : ");
     id = int.parse(stdin.readLineSync()!);
 
     stdout.write("Enter Employee Name : ");
@@ -37,7 +38,6 @@ class Employee
       'emp_age': age,
       'emp_salary': salary
     };
-
     print(emp);
   }
 }
