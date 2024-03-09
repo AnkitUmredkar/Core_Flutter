@@ -1,4 +1,4 @@
-//1. Writ a Dart Program to gt an print total thrmplo!s information using usr input and Map
+// Writ a Dart Program to gt an print total thrmplo!s information using usr input and Map
 //Map datatype(use MapEntry class)
 // Tak low mntion attriuts for on
 // id
@@ -8,23 +8,23 @@
 
 import 'dart:io';
 
-class MapEntry 
+class Employee 
 {
   var id, name, age, salary;
 
   void set(int i) 
   {
     stdout.write("\n\nEnter Employee id : ");
-    id = stdin.readLineSync()!;
+    id = int.parse(stdin.readLineSync()!);
 
     stdout.write("Enter Employee Name : ");
     name = stdin.readLineSync()!;
 
     stdout.write("Enter Employee Age : ");
-    age = stdin.readLineSync()!;
+    age = int.parse(stdin.readLineSync()!);
 
     stdout.write("Enter Employee Salary : ");
-    salary = stdin.readLineSync()!;
+    salary = int.parse(stdin.readLineSync()!);
   }
 
   void get(int i) 
@@ -44,18 +44,18 @@ class MapEntry
 
 void main() 
 {
-  List<MapEntry> emp1 = [];
+  List<Employee> arr = [];
 
   for (int i = 0; i < 3; i++)
   {
-    MapEntry m1 = MapEntry();
-    m1.set(i);
-    emp1.add(m1);
+    Employee e1 = Employee();
+    e1.set(i);
+    arr.add(e1);
   }
 
   for(int i=0; i<3; i++)
   {
-    emp1[i].get(i);
+    arr[i].get(i);
   }
     
 }
