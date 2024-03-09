@@ -1,4 +1,4 @@
-//2. Write a Dart Program to print all unique elements from a List. Elements may be  redundant 
+//2.Write a Dart Program to print all unique elements from a List. Elements may be  redundant 
 // while entring into a List. Usr can only enter elements of String datatype.
 
 import 'dart:io';
