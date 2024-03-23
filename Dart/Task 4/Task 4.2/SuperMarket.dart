@@ -50,7 +50,7 @@ class Supermarket {
 }
 
 void main() {
-  int i, n;
+  int i, n, j;
   String id, pswrd;
   bool check = false;
   List<Supermarket> list = [];
@@ -58,6 +58,7 @@ void main() {
 
   stdout.write("\nUser ID : admin\nPassword : 1234\n\n");
 
+  // Verify User ID And Password
   do {
     stdout.write("Enter your user ID : ");
     id = stdin.readLineSync()!;
@@ -80,6 +81,7 @@ void main() {
     list.add(obj);
   }
 
+  //Railway Reservation System
   do {
     obj.GetChoice();
     switch (obj.choice) {
@@ -96,7 +98,17 @@ void main() {
         break;
 
       case 2:
-        print("\nAll Train Details Are Below : ");
+        //Sort In Ascending Order
+        for (i = 0; i < list.length; i++) {
+          for (j = i + 1; j < list.length; j++) {
+            if (list[i].ItemNumber! > list[j].ItemNumber!) {
+              Supermarket obj = list[j];
+              list[j] = list[i];
+              list[i] = obj;
+            }
+          }
+        }
+        print("\nAll Train Details in Ascending Order Are Below : ");
         for (i = 0; i < list.length; i++) {
           list[i].getter(i);
         }
