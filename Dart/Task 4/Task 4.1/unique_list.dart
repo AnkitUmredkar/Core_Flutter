@@ -3,8 +3,6 @@
 
 import 'dart:io';
 
-List unique(List names) => names.toSet().toList();
-
 void main() {
   List<String> names = [];
 
@@ -20,3 +18,5 @@ void main() {
   print("\nUnique List is Below : ");
   print(unique(names));
 }
+
+List unique(List names) => names.toSet().toList();
